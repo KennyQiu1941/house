@@ -102,8 +102,6 @@ class HousesSpider(RedisSpider):
             0]
         content_ele = response.xpath(r'//div[@class="overview"]/div[@class="content"]/div[@class="aroundInfo"]')
         # 小区名ls
-        item['community_name'] = content_ele.xpath(r'./div[@class="communityName"]/a[@class="info "]/text()').extract()[
-            0]
         # 地区名
         item['area_name'] = list_to_str(
             content_ele.xpath(r'./div[@class="areaName"]/span[@class="info"]//a/text()').extract())
