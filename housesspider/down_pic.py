@@ -1,6 +1,8 @@
 import requests
 from housesspider import settings
 import pymongo
+'''这里是用来下载包含有户型以及面积信息的图片'''
+
 
 con = pymongo.MongoClient(host=settings.DATABASE_IP, port=settings.MONGODB_PORT)
 db = con['lianjia_ershouhouse']
